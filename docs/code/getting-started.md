@@ -630,7 +630,7 @@ Make sure to give the Grid, Buttons, and Labels unique names that you’ll remem
     layout.attach (rotate_button, 0, 1, 1, 1);
     layout.attach_next_to (rotate_label, rotate_button, Gtk.PositionType.RIGHT, 1, 1);
 
-    this.add (layout);
+    window.add (layout);
 
 Notice that the attach method takes 5 arguments:
 
@@ -749,7 +749,7 @@ We now know how to send a notification, but what if you need to update it with n
 Let's make the replace button. This button will replace the current notification with one with different information. Let's create a new button for it, and add it to the grid:
 
 	var replace_button = new Gtk.Button.with_label (_("Replace"));
-	grid.add (update_button);
+	grid.add (replace_button);
 
 	replace_button.clicked.connect (() => {
 		var notification = new Notification (_("Hello Again"));
